@@ -1,0 +1,119 @@
+.header {
+    background: grey;
+    display: flex;
+    height: 555px;
+    border-bottom-left-radius: 25% 100px;
+    border-bottom-right-radius: 25% 100px;
+    animation: animate-radius 2s infinite, float 4s ease-in-out infinite;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Animate the border-radius */
+@keyframes animate-radius {
+    0%, 100% {
+        border-bottom-left-radius: 25% 100px;
+        border-bottom-right-radius: 25% 100px;
+    }
+    50% {
+        border-bottom-left-radius: 50% 100px;
+        border-bottom-right-radius: 50% 100px;
+    }
+}
+
+/* Floating effect */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0); /* Starting position */
+    }
+    50% {
+        transform: translateY(-10px); /* Move up slightly */
+    }
+}
+
+.navbar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: black;
+    font-weight: 600;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title .welcome {
+    color: white;
+}
+
+.title .portal {
+    color: #282525;
+    font-weight: 600;
+}
+
+/* Login button styling and positioning */
+.login {
+    position: absolute;
+    bottom: 130px;
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    color: black;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login:hover {
+    background-color: black;
+    color: white;
+}
+
+.login-form-enter {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  
+  .login-form-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms, transform 300ms;
+  }
+  
+  .login-form-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .login-form-exit-active {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 300ms, transform 300ms;
+  }
